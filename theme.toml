@@ -1,12 +1,12 @@
-name = "Blank"
+name = "Aggressively Mediocre"
 license = "MIT"
-licenselink = "https://github.com/vimux/blank/blob/master/LICENSE"
-description = "Starter Hugo theme for developers."
-homepage = "https://github.com/vimux/blank/"
-tags = ["blog", "plain", "blank", "starter", "development"]
+licenselink = "https://github.com/katesowles/aggressively-mediocre/blob/master/LICENSE"
+description = "Minimal Hugo theme."
+homepage = "https://github.com/katesowles/aggressively-mediocre/"
+tags = ["blog", "minimal"]
 features = ["blog"]
 min_version = "0.20"
 
 [author]
-  name = "Vimux"
-  homepage = "https://github.com/vimux"
+  name = "Kate Sowles"
+  homepage = "https://github.com/katesowles"
