@@ -1,0 +1,27 @@
+{{ define "main" }}
+<!-- prettier-ignore -->
+
+<article class="content post h-entry">
+  <h2 class="post-title">
+    {{ if .Title }}
+    {{ .Title }}
+    {{ else }}
+    <time class="dt-published"
+      datetime="{{ .Date.UTC.Format "2006-01-02 15:04:05 MST-0700" }}">{{ .Date.UTC.Format "Mon Jan 02 2006 15:04:05 MST-0700" }}
+      (Coordinated Universal Time)</time>
+    {{ end }}
+  </h2>
+
+  {{ partial "tag-list" . }}
+
+  <div class="e-content">
+    {{ .Content }}
+  </div>
+</article>
+
+{{ if .Site.Params.include_conversation }}
+<script type="text/javascript" src="https://micro.blog/conversation.js?url={{ .Permalink }}"></script>
+{{ end }}
+<span style="display: none">this is the post/single.html layout</span>
+
+{{ end }}

@@ -1,0 +1,18 @@
+{{ define "main" }}
+<!-- prettier-ignore -->
+
+<div>
+  {{ $posts := .Paginate (where .Site.RegularPages "Type" "in" "posts") }}
+  
+  {{ range $posts.Pages }}
+    {{ if .Site.Params.listFullPosts }}
+      {{ partial "post-unabridged" . }}
+    {{ else }}
+      {{ partial "post-abridged" . }}
+    {{ end }}
+  {{ end }}
+  
+  {{ partial "pagination.html" . }}
+</div>
+
+{{ end }}

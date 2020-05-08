@@ -1,7 +1,13 @@
 {{ define "main" }}
 <!-- prettier-ignore -->
 
-<div>
+{{/* regular content pages */}} 
+<article class="content page">
+  <h2 class="page-title">{{ .Title }}</h2>
+  {{ .Content }}
+</article>
+
+{{/*  <div>
   <h1>{{ .Title }}</h1>
   <time>{{ .Date.Format "02.01.2006 15:04" }}</time>
   <div>
@@ -21,7 +27,6 @@
     {{ template "_internal/disqus.html" . }}
   </div>
   {{ end }}
-</div>
-{{ partial "sidebar.html" . }}
+</div>  */}}
 
 {{ end }}
