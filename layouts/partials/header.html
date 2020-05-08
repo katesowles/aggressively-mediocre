@@ -1,12 +1,14 @@
-<header class="container">
-	<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-	{{ with .Site.Menus.main }}
-	<nav>
-		<ul>
-			{{ range . }}
-			<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-			{{ end }}
-		</ul>
-	</nav>
-	{{ end }}
+<header class="container masthead">
+  <h1 class="masthead-title">
+    <a href="/">{{ .Site.Title }}</a>
+  </h1>
+
+  <nav class="masthead-nav">
+
+    {{ range (where .Site.RegularPages.ByTitle "Section" "pages" ) }}
+      <a class="page-link" href="{{ .Permalink }}">{{ .Params.title | humanize | title }}</a>
+    {{ end }}
+
+    <a class="page-link" href="{{ "feed.xml" | absURL }}">RSS</a>
+  </nav>
 </header>

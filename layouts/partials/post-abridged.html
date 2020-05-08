@@ -1,0 +1,11 @@
+<!-- prettier-ignore -->
+
+<article>
+  {{ partial "frontmatter" . }}
+
+  {{ .Summary }}
+    
+  {{ if .Truncated }}
+    <a href="{{ .Permalink }}">Read more...</a>
+  {{ end }}
+</article>
