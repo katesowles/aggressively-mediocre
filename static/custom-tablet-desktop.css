@@ -1,0 +1,13 @@
+@media (min-width: 38rem) {
+  html {
+    font-size: 20px;
+  }
+  .constrained-section {
+    padding: 0 1rem;
+  }
+  .site-header,
+  .site-footer {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
