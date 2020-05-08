@@ -1,10 +1,9 @@
-<header class="container masthead">
-  <h1 class="masthead-title">
+<header class="constrained-section site-header">
+  <h1 class="site-title">
     <a href="/">{{ .Site.Title }}</a>
   </h1>
 
-  <nav class="masthead-nav">
-
+  <nav class="primary-nav">
     {{ range (where .Site.RegularPages.ByTitle "Section" "pages" ) }}
       <a class="page-link" href="{{ .Permalink }}">{{ .Params.title | humanize | title }}</a>
     {{ end }}
