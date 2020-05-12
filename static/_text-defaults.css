@@ -62,13 +62,13 @@ abbr {
 }
 abbr[title] {
   cursor: help;
-  border-bottom: 1px dotted #e5e5e5;
+  border-bottom: 1px dotted var(--border-color);
 }
 blockquote {
   padding: 0 0 0 1.5rem;
   margin: 0 2rem 1rem 0;
   color: #999;
-  border-left: 0.5rem solid #e5e5e5;
+  border-left: 0.5rem solid var(--border-color);
 }
 blockquote p:last-child {
   margin-bottom: 0;
@@ -81,7 +81,7 @@ code {
   padding: 0.25rem 0.5rem;
   font-size: 1rem;
   color: #bf616a;
-  background-color: #f9f9f9;
+  background-color: var(--alt-bg-color);
   border-radius: 3px;
 }
 pre {
@@ -94,7 +94,7 @@ pre {
   white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
-  background-color: #f9f9f9;
+  background-color: var(--alt-bg-color);
 }
 pre code {
   padding: 0;

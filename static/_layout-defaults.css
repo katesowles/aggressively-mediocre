@@ -16,13 +16,13 @@ html {
 }
 body {
   color: #515151;
-  background-color: #fff;
+  background-color: var(--site-bg-color);
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 hr {
   border: 0;
-  border-top: 0.5px solid #eee;
-  border-bottom: 0.5px solid #eee;
+  border-top: 0.5px solid var(--border-color);
+  border-bottom: 0.5px solid var(--border-color);
   margin: 1.5rem auto;
 }
