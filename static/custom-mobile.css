@@ -259,7 +259,7 @@
   font-weight: 300;
 }
 .site-title a {
-  color: #333;
+  color: var(--heading-text-color);
 }
 .site-title a:hover,
 .site-title a:focus {
@@ -275,7 +275,7 @@
   text-transform: uppercase;
 }
 .site-title--small a {
-  color: #333;
+  color: var(--heading-text-color);
 }
 .site-title--small a:hover,
 .site-title--small a:focus {
@@ -295,11 +295,11 @@
 }
 .site-header .primary-nav a:hover,
 .site-header .primary-nav a:focus {
-  color: #333;
+  color: var(--heading-text-color);
   text-decoration: none;
 }
 .site-header .primary-nav a::after {
-  background: none repeat scroll 0 0 #000000;
+  background: none repeat scroll 0 0 var(--link-text-color);
   bottom: 0;
   content: "";
   display: block;
@@ -338,14 +338,14 @@
   margin-bottom: 0.25rem;
 }
 .list-post-title a {
-  color: #333;
+  color: var(--heading-text-color);
 }
 .list-post-title a:hover,
 .list-post-title a:focus {
   text-decoration: none;
 }
 .projects-list a {
-  color: #333;
+  color: var(--heading-text-color);
 }
 
 .site-footer {

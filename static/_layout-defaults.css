@@ -15,7 +15,7 @@ html {
   line-height: 1.6;
 }
 body {
-  color: #515151;
+  color: var(--body-text-color);
   background-color: var(--site-bg-color);
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;

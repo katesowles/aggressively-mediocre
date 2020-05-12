@@ -2,4 +2,8 @@
   --site-bg-color: #ffffff;
   --alt-bg-color: #efefef;
   --border-color: #e5e5e5;
+
+  --body-text-color: #2f2f2f;
+  --heading-text-color: #2f2f2f;
+  --link-text-color: #268bd2; // blueish
 }
