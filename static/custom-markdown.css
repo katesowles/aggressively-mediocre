@@ -1,6 +1,6 @@
 .highlight {
   margin-bottom: 1rem;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
 }
 .highlight pre {
   margin-bottom: 0;

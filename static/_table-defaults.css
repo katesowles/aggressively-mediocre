@@ -1,13 +1,13 @@
 table {
   margin-bottom: 1rem;
   width: 100%;
-  border: 1px solid var(--border-color);
+  border: var(--border-solid);
   border-collapse: collapse;
 }
 td,
 th {
   padding: 0.25rem 0.5rem;
-  border: 1px solid var(--border-color);
+  border: var(--border-solid);
 }
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {

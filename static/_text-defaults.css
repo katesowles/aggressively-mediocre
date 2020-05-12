@@ -132,13 +132,13 @@ abbr {
 }
 abbr[title] {
   cursor: help;
-  border-bottom: 1px dotted var(--border-color);
+  border-bottom: var(--border-dotted);
 }
 blockquote {
   padding: 0 0 0 1.5rem;
   margin: 0 2rem 1rem 0;
   color: #999;
-  border-left: 0.5rem solid var(--border-color);
+  border-left: var(--border-solid-thick);
 }
 blockquote p:last-child {
   margin-bottom: 0;
@@ -152,7 +152,7 @@ code {
   font-size: 1rem;
   color: #bf616a;
   background-color: var(--alt-bg-color);
-  border-radius: 3px;
+  border-radius: var(--border-radius);
 }
 pre {
   display: block;

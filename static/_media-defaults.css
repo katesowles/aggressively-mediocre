@@ -3,7 +3,7 @@ img {
   max-width: 100%;
   height: auto;
   margin: 0 0 1rem;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
 }
 video {
   max-width: 100%;
