@@ -1,12 +1,37 @@
-a {
-  color: var(--link-text-color);
-  text-decoration: none;
-}
+a,
 a:active,
 a:hover,
 a:focus,
 a:visited {
+  color: var(--link-text-color);
   text-decoration: none;
+
+  -webkit-box-shadow: inset 0px -5px 0px 0px rgba(153, 204, 0, 0.5);
+  -moz-box-shadow: inset 0px -5px 0px 0px rgba(153, 204, 0, 0.5);
+  box-shadow: inset 0px -5px 0px 0px rgba(153, 204, 0, 0.5);
+
+  -webkit-transition: box-shadow 0.5s ease 0s, left 0.5s ease 0s;
+  -moz-transition: box-shadow 0.5s ease 0s, left 0.5s ease 0s;
+  transition: box-shadow 0.5s ease 0s, left 0.5s ease 0s;
+
+  /* background: none repeat scroll 0 0 var(--link-text-color);
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  margin-top: 8px;
+  position: absolute;
+  right: 0;
+  width: 0; */
+}
+a:focus,
+a:hover {
+  -webkit-box-shadow: inset 0px -5px 0px 0px rgba(153, 204, 0, 1);
+  -moz-box-shadow: inset 0px -5px 0px 0px rgba(153, 204, 0, 1);
+  box-shadow: inset 0px -5px 0px 0px rgba(153, 204, 0, 1);
+  /* left: 0;
+  width: 100%; */
 }
 h1,
 h2,
@@ -24,11 +49,56 @@ h6 {
 h1 {
   font-size: 2.25rem;
 }
+h1 a,
+h1 a:active,
+h1 a:hover,
+h1 a:focus,
+h1 a:visited {
+  -webkit-box-shadow: inset 0px -12px 0px 0px rgba(153, 204, 0, 0.5);
+  -moz-box-shadow: inset 0px -12px 0px 0px rgba(153, 204, 0, 0.5);
+  box-shadow: inset 0px -12px 0px 0px rgba(153, 204, 0, 0.5);
+}
+h1 a:focus,
+h1 a:hover {
+  -webkit-box-shadow: inset 0px -12px 0px 0px rgba(153, 204, 0, 1);
+  -moz-box-shadow: inset 0px -12px 0px 0px rgba(153, 204, 0, 1);
+  box-shadow: inset 0px -12px 0px 0px rgba(153, 204, 0, 1);
+}
 h2 {
   font-size: 1.5rem;
 }
+h2 a,
+h2 a:active,
+h2 a:hover,
+h2 a:focus,
+h2 a:visited {
+  -webkit-box-shadow: inset 0px -8px 0px 0px rgba(153, 204, 0, 0.5);
+  -moz-box-shadow: inset 0px -8px 0px 0px rgba(153, 204, 0, 0.5);
+  box-shadow: inset 0px -8px 0px 0px rgba(153, 204, 0, 0.5);
+}
+h2 a:focus,
+h2 a:hover {
+  -webkit-box-shadow: inset 0px -8px 0px 0px rgba(153, 204, 0, 1);
+  -moz-box-shadow: inset 0px -8px 0px 0px rgba(153, 204, 0, 1);
+  box-shadow: inset 0px -8px 0px 0px rgba(153, 204, 0, 1);
+}
 h3 {
   font-size: 1.33rem;
+}
+h3 a,
+h3 a:active,
+h3 a:hover,
+h3 a:focus,
+h3 a:visited {
+  -webkit-box-shadow: inset 0px -7px 0px 0px rgba(153, 204, 0, 0.5);
+  -moz-box-shadow: inset 0px -7px 0px 0px rgba(153, 204, 0, 0.5);
+  box-shadow: inset 0px -7px 0px 0px rgba(153, 204, 0, 0.5);
+}
+h3 a:focus,
+h3 a:hover {
+  -webkit-box-shadow: inset 0px -7px 0px 0px rgba(153, 204, 0, 1);
+  -moz-box-shadow: inset 0px -7px 0px 0px rgba(153, 204, 0, 1);
+  box-shadow: inset 0px -7px 0px 0px rgba(153, 204, 0, 1);
 }
 h4,
 h5,
