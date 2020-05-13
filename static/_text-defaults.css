@@ -1,0 +1,158 @@
+a,
+a:active,
+a:hover,
+a:focus,
+a:visited {
+  color: var(--link-text-color);
+  text-decoration: none;
+
+  -webkit-box-shadow: inset 0px -5px 0px 0px rgba(153, 204, 0, 0.5);
+  -moz-box-shadow: inset 0px -5px 0px 0px rgba(153, 204, 0, 0.5);
+  box-shadow: inset 0px -5px 0px 0px rgba(153, 204, 0, 0.5);
+
+  -webkit-transition: box-shadow 0.5s ease 0s, left 0.5s ease 0s;
+  -moz-transition: box-shadow 0.5s ease 0s, left 0.5s ease 0s;
+  transition: box-shadow 0.5s ease 0s, left 0.5s ease 0s;
+}
+a:focus,
+a:hover {
+  -webkit-box-shadow: inset 0px -5px 0px 0px rgba(153, 204, 0, 1);
+  -moz-box-shadow: inset 0px -5px 0px 0px rgba(153, 204, 0, 1);
+  box-shadow: inset 0px -5px 0px 0px rgba(153, 204, 0, 1);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 var(--spacing-sm);
+  font-weight: bold;
+  line-height: 1.1;
+  color: var(--heading-text-color);
+  letter-spacing: -0.025rem;
+}
+h1 {
+  font-size: 2.25rem;
+  font-weight: normal;
+}
+h1 a,
+h1 a:active,
+h1 a:visited {
+  -webkit-box-shadow: inset 0px -12px 0px 0px rgba(153, 204, 0, 0.5);
+  -moz-box-shadow: inset 0px -12px 0px 0px rgba(153, 204, 0, 0.5);
+  box-shadow: inset 0px -12px 0px 0px rgba(153, 204, 0, 0.5);
+}
+h1 a:focus,
+h1 a:hover {
+  -webkit-box-shadow: inset 0px -12px 0px 0px rgba(153, 204, 0, 1);
+  -moz-box-shadow: inset 0px -12px 0px 0px rgba(153, 204, 0, 1);
+  box-shadow: inset 0px -12px 0px 0px rgba(153, 204, 0, 1);
+}
+h2 {
+  font-size: 1.75rem;
+}
+h2 a,
+h2 a:active,
+h2 a:visited {
+  -webkit-box-shadow: inset 0px -10px 0px 0px rgba(153, 204, 0, 0.5);
+  -moz-box-shadow: inset 0px -10px 0px 0px rgba(153, 204, 0, 0.5);
+  box-shadow: inset 0px -10px 0px 0px rgba(153, 204, 0, 0.5);
+}
+h2 a:focus,
+h2 a:hover {
+  -webkit-box-shadow: inset 0px -10px 0px 0px rgba(153, 204, 0, 1);
+  -moz-box-shadow: inset 0px -10px 0px 0px rgba(153, 204, 0, 1);
+  box-shadow: inset 0px -10px 0px 0px rgba(153, 204, 0, 1);
+}
+h3 {
+  font-size: 1.2rem;
+}
+h3 a,
+h3 a:active,
+h3 a:visited {
+  -webkit-box-shadow: inset 0px -7px 0px 0px rgba(153, 204, 0, 0.5);
+  -moz-box-shadow: inset 0px -7px 0px 0px rgba(153, 204, 0, 0.5);
+  box-shadow: inset 0px -7px 0px 0px rgba(153, 204, 0, 0.5);
+}
+h3 a:focus,
+h3 a:hover {
+  -webkit-box-shadow: inset 0px -7px 0px 0px rgba(153, 204, 0, 1);
+  -moz-box-shadow: inset 0px -7px 0px 0px rgba(153, 204, 0, 1);
+  box-shadow: inset 0px -7px 0px 0px rgba(153, 204, 0, 1);
+}
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+}
+p {
+  margin: 0 0 var(--spacing-md);
+}
+
+p + h1,
+p + h2,
+p + h3,
+ul + h1,
+ul + h2,
+ul + h3,
+ol + h1,
+ol + h2,
+ol + h3 {
+  margin-top: var(--spacing-md);
+}
+strong {
+  color: inherit;
+  font-weight: bold;
+}
+abbr {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--heading-text-color);
+  text-transform: uppercase;
+}
+abbr[title] {
+  cursor: help;
+  border-bottom: var(--border-dotted);
+}
+blockquote {
+  padding: 0 0 0 var(--spacing-md);
+  margin: 0 var(--spacing-lg) var(--spacing-md) 0;
+  color: var(--blockquote-text-color);
+  border-left: var(--border-solid-thick);
+}
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+code,
+pre {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+}
+code {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: 1rem;
+  color: var(--code-text-color);
+  background-color: var(--alt-bg-color);
+  border-radius: var(--border-radius);
+}
+pre {
+  display: block;
+  margin-top: 0;
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-md);
+  font-size: 1rem;
+  line-height: 1.4;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  background-color: var(--alt-bg-color);
+}
+pre code {
+  padding: 0;
+  font-size: 1rem;
+  color: inherit;
+  background-color: transparent;
+}
+time {
+  text-transform: uppercase;
+}

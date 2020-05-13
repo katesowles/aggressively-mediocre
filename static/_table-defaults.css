@@ -1,0 +1,15 @@
+table {
+  margin-bottom: var(--spacing-md);
+  width: 100%;
+  border: var(--border-solid);
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: var(--border-solid);
+}
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+  background-color: var(--alt-bg-color);
+}

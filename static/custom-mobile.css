@@ -1,0 +1,53 @@
+@import "_layout-defaults.css";
+@import "_list-defaults.css";
+@import "_media-defaults.css";
+@import "_table-defaults.css";
+@import "_text-defaults.css";
+
+/* site structure (desktop sizes set in custom-tablet-desktop.css) */
+.constrained-section {
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+.site-header,
+.site-footer {
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+.post {
+  margin-bottom: var(--spacing-lg);
+}
+.primary-nav a:last-child,
+.postlast-child {
+  margin-bottom: 0;
+}
+
+/* texts and links */
+.site-title span {
+  color: #ddd;
+  /* color: white;
+  font-weight: bold;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--body-text-color); */
+}
+.primary-nav a,
+.post-tags a {
+  text-transform: lowercase;
+  margin-right: var(--spacing-sm);
+}
+.post-duration {
+  color: #8f8f8f; // what color should this be???
+  text-transform: uppercase;
+}
+.primary-nav a:last-child,
+.post-tags a:last-child {
+  margin-right: 0;
+}
+
+#post-nav {
+  padding-top: var(--spacing-md);
+}
+#post-nav .prev {
+  padding-right: var(--spacing-md);
+}

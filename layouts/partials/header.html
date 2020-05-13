@@ -1,14 +1,22 @@
-<header class="container masthead">
-  <h1 class="masthead-title">
-    <a href="/">{{ .Site.Title }}</a>
+<!-- prettier-ignore -->
+
+<header class="constrained-section site-header">
+  <h1 class="site-title">
+    {{/*  <a class="page-link" href="/">  */}}
+      {{ .Site.Title }}
+      <span>{{ .Site.Params.titleDim }}</span>
+    {{/*  </a>  */}}
   </h1>
 
-  <nav class="masthead-nav">
+  <nav class="primary-nav">
+    <a class="page-link" href="/">Posts</a>
 
     {{ range (where .Site.RegularPages.ByTitle "Section" "pages" ) }}
       <a class="page-link" href="{{ .Permalink }}">{{ .Params.title | humanize | title }}</a>
     {{ end }}
 
-    <a class="page-link" href="{{ "feed.xml" | absURL }}">RSS</a>
+    {{ if and (.Site.Params.rssFeedLinkText) (.Site.Params.rssFeedLinkUrl) }}
+      <a class="page-link rss-feed" href="{{ .Site.Params.rssFeedLinkUrl }}">{{ .Site.Params.rssFeedLinkText }}</a>
+    {{ end }}
   </nav>
 </header>
