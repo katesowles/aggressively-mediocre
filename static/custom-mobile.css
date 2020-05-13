@@ -24,13 +24,6 @@
 }
 
 /* texts and links */
-.site-title span {
-  color: #ddd;
-  /* color: white;
-  font-weight: bold;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--body-text-color); */
-}
 .primary-nav a,
 .post-tags a {
   text-transform: lowercase;
