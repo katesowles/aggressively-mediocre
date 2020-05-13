@@ -10,7 +10,7 @@
       <a href="/">Posts</a>
     </h2>
 
-    {{ range (where .Site.RegularPages.ByTitle "Section" "pages" ) }}
+    {{ range (where .Site.RegularPages.ByTitle "Section" "" ) }}
       <h2 class="nav-link">
         <a href="{{ .Permalink }}">{{ .Params.title | humanize | title }}</a>
       </h2>
