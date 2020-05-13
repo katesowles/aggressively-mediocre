@@ -1,5 +1,6 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
+slug: "/{{ now.Format "2006-01-02" }}/{{ lower .Name | urlize }}"
 date: {{ .Date }}
 draft: true
 tags:
