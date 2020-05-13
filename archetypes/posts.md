@@ -3,7 +3,8 @@ title: "{{ replace .Name "-" " " | title }}"
 slug: "/{{ now.Format "2006-01-02" }}/{{ lower .Name | urlize }}"
 date: {{ .Date }}
 draft: true
-tags:
+category: ["personal", "professional"]
+tag:
   [
     "ADD",
     "ADHD",
@@ -12,7 +13,6 @@ tags:
     "depression",
     "mental health",
     "neurodiversity",
-    "personal",
     "software development",
   ]
 ---
