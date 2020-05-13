@@ -5,12 +5,10 @@
   .constrained-section {
     padding: 0 var(--spacing-md);
   }
-  .site-header,
-  .site-footer {
+  .responsive-section--top {
     margin-top: var(--spacing-xl);
-    margin-bottom: var(--spacing-xl);
   }
-  .post {
+  .responsive-section--bottom {
     margin-bottom: var(--spacing-xl);
   }
 }

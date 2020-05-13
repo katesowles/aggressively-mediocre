@@ -10,34 +10,20 @@
   margin: 0 auto;
   padding: 0 var(--spacing-md);
 }
-.site-header,
-.site-footer {
+.responsive-section--top {
   margin-top: var(--spacing-lg);
+}
+.responsive-section--bottom {
   margin-bottom: var(--spacing-lg);
 }
-.post {
-  margin-bottom: var(--spacing-lg);
+.post:first-child {
+  margin-top: 0;
 }
-.primary-nav a:last-child,
-.postlast-child {
-  margin-bottom: 0;
-}
-
-/* texts and links */
-.primary-nav a,
-.post-tags a {
-  text-transform: lowercase;
-  margin-right: var(--spacing-sm);
-}
-.post-duration {
-  color: #8f8f8f; // what color should this be???
-  text-transform: uppercase;
-}
-.primary-nav a:last-child,
-.post-tags a:last-child {
-  margin-right: 0;
+.post-frontmatter {
+  margin-bottom: var(--spacing-md);
 }
 
+/* pagination controls */
 #post-nav {
   padding-top: var(--spacing-md);
 }
