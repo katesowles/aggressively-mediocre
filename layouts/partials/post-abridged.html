@@ -1,11 +1,11 @@
 <!-- prettier-ignore -->
 
-<article>
-  {{ partial "frontmatter" . }}
+<article class="content post abridged">
+  {{ partial "frontmatter" (dict "context" .context "isHome" .isHome) }}
 
-  {{ .Summary }}
+  {{ .context.Summary }}
     
-  {{ if .Truncated }}
-    <a href="{{ .Permalink }}">Read more...</a>
+  {{ if .context.Truncated }}
+    <a href="{{ .context.Permalink }}">Read more...</a>
   {{ end }}
 </article>

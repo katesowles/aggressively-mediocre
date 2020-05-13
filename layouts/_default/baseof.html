@@ -8,9 +8,7 @@
   <body>
     {{ partial "header" . }}
 
-    <main class="constrained-section">
-      {{ block "main" . }}{{ end }}
-    </main>
+    {{ block "main" . }}{{ end }}
 
     {{ partial "footer" . }}
   </body>

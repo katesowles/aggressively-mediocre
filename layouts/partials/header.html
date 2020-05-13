@@ -2,16 +2,21 @@
 
 <header class="constrained-section site-header">
   <h1 class="site-title">
-    <a href="/">{{ .Site.Title }}</a>
+    {{/*  <a class="page-link" href="/">  */}}
+      {{ .Site.Title }}
+      <span>{{ .Site.Params.titleDim }}</span>
+    {{/*  </a>  */}}
   </h1>
 
   <nav class="primary-nav">
+    <a class="page-link" href="/">Posts</a>
+
     {{ range (where .Site.RegularPages.ByTitle "Section" "pages" ) }}
       <a class="page-link" href="{{ .Permalink }}">{{ .Params.title | humanize | title }}</a>
     {{ end }}
-    
-    {{ range .AlternativeOutputFormats -}}
-      {{ printf `<a class="page-link alternate-feed %s" href="%s">%s</a>` .MediaType.SubType .Permalink .MediaType.SubType | safeHTML }}
-    {{ end -}}
+
+    {{ if and (.Site.Params.rssFeedLinkText) (.Site.Params.rssFeedLinkUrl) }}
+      <a class="page-link rss-feed" href="{{ .Site.Params.rssFeedLinkUrl }}">{{ .Site.Params.rssFeedLinkText }}</a>
+    {{ end }}
   </nav>
 </header>

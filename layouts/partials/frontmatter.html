@@ -1,9 +1,22 @@
-<h2 class="post-title">
-  <a href="{{ .Permalink }}">{{ .Title }}</a>
-</h2>
+<div class="frontmatter">
+  <!-- prettier-ignore -->
 
-<time class="post-date">
-  {{ .Date.UTC.Format "Mon Jan 02 2006 15:04:05 MST-0700" }}
-</time>
+  <h2 class="post-title">
+    {{ if .isHome }}
+      <a href="{{ .context.Permalink }}">{{ .context.Title }}</a>
+    {{ else }}
+      {{ .context.Title }}
+    {{ end }}
+  </h2>
 
-{{ partial "tag-list" . }}
+  <h3>
+    <time class="post-date">
+      {{ .context.Date.UTC.Format "Mon Jan 02 2006 15:04:05 MST-0700" }}
+    </time>
+  </h3>
+  <h4 class="post-duration">
+    {{ .context.ReadingTime }} min read
+  </h4>
+
+  {{ partial "tag-list" .context }}
+</div>

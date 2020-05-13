@@ -1,18 +1,17 @@
 {{ define "main" }}
 <!-- prettier-ignore -->
-
-<div>
+<main class="constrained-section site-content post-list">
   {{ $posts := .Paginate (where .Site.RegularPages "Type" "in" "posts") }}
-  
+
   {{ range $posts.Pages }}
     {{ if .Site.Params.listFullPosts }}
-      {{ partial "post-unabridged" . }}
+      {{ partial "post-unabridged" (dict "context" . "isHome" .IsHome ) }}
     {{ else }}
-      {{ partial "post-abridged" . }}
+      {{ partial "post-abridged" (dict "context" . "isHome" .IsHome ) }}
     {{ end }}
   {{ end }}
   
   {{ partial "pagination.html" . }}
-</div>
+</main>
 
 {{ end }}

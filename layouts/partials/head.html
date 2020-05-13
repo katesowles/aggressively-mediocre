@@ -1,7 +1,6 @@
 <!-- prettier-ignore -->
 
 <head>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -25,7 +24,7 @@
   <link rel="stylesheet" href="{{ "custom-mobile.css" | relURL }}" />
   <link rel="stylesheet" href="{{ "custom-tablet-desktop.css" | relURL }}" media="(min-width: 38rem)" />
 
-  {{ range .AlternativeOutputFormats -}}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" /> ` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-  {{ end -}}
+  {{ if and (.Site.Params.rssFeedLinkText) (.Site.Params.rssFeedLinkUrl) }}
+    <link rel="alternate" type="application/rss+xml" href="{{ .Site.Params.rssFeedLinkUrl }}" title="{{ .Site.Title }}" />
+  {{ end }}
 </head>
