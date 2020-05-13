@@ -1,7 +1,12 @@
 <!-- prettier-ignore -->
 
-<article class="content post unabridged">
-  {{ partial "frontmatter" (dict "context" .context "isHome" .isHome) }}
+<article class="post unabridged">
+  {{ partial "post-frontmatter" (dict "context" .context "isHome" .isHome) }}
 
-  {{ .context.Content }}
+  <section class="content">
+    {{ .context.Content }}
+  </section>
+
+  {{ partial "post-tags" .context }}
+
 </article>

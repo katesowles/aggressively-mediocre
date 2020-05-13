@@ -1,11 +1,15 @@
 <!-- prettier-ignore -->
 
-<article class="content post abridged">
-  {{ partial "frontmatter" (dict "context" .context "isHome" .isHome) }}
+<article class="post abridged">
+  {{ partial "post-frontmatter" (dict "context" .context "isHome" .isHome) }}
 
-  {{ .context.Summary }}
+  <section class="content">
+    {{ .context.Summary }}
     
-  {{ if .context.Truncated }}
-    <a href="{{ .context.Permalink }}">Read more...</a>
-  {{ end }}
+    {{ if .context.Truncated }}
+      <a class="read-more" href="{{ .context.Permalink }}">Read more...</a>
+    {{ end }}
+  </section>
+
+  {{ partial "post-tags" .context }}
 </article>
