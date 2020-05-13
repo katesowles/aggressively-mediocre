@@ -1,21 +1,21 @@
-<div class="frontmatter">
+<div class="post-frontmatter">
   <!-- prettier-ignore -->
 
-  <h2 class="post-title">
+  <h3 class="post-title">
     {{ if .isHome }}
       <a href="{{ .context.Permalink }}">{{ .context.Title }}</a>
     {{ else }}
       {{ .context.Title }}
     {{ end }}
-  </h2>
-
-  <h3>
-    <time class="post-date">
-      {{ .context.Date.UTC.Format "Mon Jan 02 2006 15:04:05 MST-0700" }}
-    </time>
   </h3>
 
-  <h4 class="post-duration">
+  <h5 class="post-date">
+    <time>
+      {{ .context.Date.UTC.Format "Mon Jan 02 2006 15:04:05 MST-0700" }}
+    </time>
+  </h5>
+
+  <h6 class="post-duration">
     {{ .context.ReadingTime }} min read
-  </h4>
+  </h6>
 </div>
