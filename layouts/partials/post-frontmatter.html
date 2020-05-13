@@ -10,7 +10,7 @@
   </h3>
 
   <h5 class="post-date">
-    <time>
+    <time datetime="{{ .Date.UTC.Format "Mon Jan 02 2006 15:04:05 MST-0700" }}">
       {{ .context.Date.UTC.Format "Mon Jan 02 2006 15:04:05 MST-0700" }}
     </time>
   </h5>
