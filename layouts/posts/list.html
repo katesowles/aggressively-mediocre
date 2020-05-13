@@ -1,6 +1,6 @@
 {{ define "page-main" }}
 <!-- prettier-ignore -->
-<main class="constrained-section site-content post-list">
+<main class="constrained-section responsive-section--bottom site-content post-list">
   {{ $posts := .Paginate (where .Site.RegularPages "Type" "in" "posts") }}
 
   {{ range $posts.Pages }}

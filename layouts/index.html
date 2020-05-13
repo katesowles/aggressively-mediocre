@@ -2,7 +2,7 @@
 <!-- CAN I PUT THIS BACK TO THE RENDER BUT WITH CONTEXT PASSED IN?? -->
 <!-- prettier-ignore -->
 
-<main class="constrained-section site-content post-list">
+<main class="constrained-section responsive-section--bottom site-content post-list">
   {{ $posts := .Paginate (where .Site.RegularPages "Type" "in" "posts") }}
   {{ $isHome := false }} {{ if .IsHome }} {{ $isHome = true }} {{ end }}
   
