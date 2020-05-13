@@ -1,5 +1,5 @@
 .highlight {
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-md);
   border-radius: var(--border-radius);
 }
 .highlight pre {

@@ -3,11 +3,14 @@
     font-size: 20px;
   }
   .constrained-section {
-    padding: 0 1rem;
+    padding: 0 var(--spacing-md);
   }
   .site-header,
   .site-footer {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+  }
+  .post {
+    margin-bottom: var(--spacing-xl);
   }
 }

@@ -4,103 +4,50 @@
 @import "_table-defaults.css";
 @import "_text-defaults.css";
 
+/* site structure (desktop sizes set in custom-tablet-desktop.css) */
 .constrained-section {
   max-width: 38rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1.5rem;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
 }
 .site-header,
 .site-footer {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
 }
-.gist .gist-file {
-  font-family: Menlo, Monaco, "Courier New", monospace !important;
+.post {
+  margin-bottom: var(--spacing-lg);
 }
-.gist .markdown-body {
-  padding: 15px;
-}
-.gist pre {
-  padding: 0;
-  background-color: transparent;
-}
-.gist .gist-file .gist-data {
-  font-size: 1rem !important;
-  line-height: 1.4;
-}
-.gist code {
-  padding: 0;
-  color: inherit;
-  background-color: transparent;
-  border-radius: 0;
+.primary-nav a:last-child,
+.postlast-child {
+  margin-bottom: 0;
 }
 
-.lead {
-  font-size: 1rem;
-}
-
-.site-title {
-  font-weight: 300;
-}
+/* texts and links */
 .site-title span {
   color: #ddd;
+  /* color: white;
+  font-weight: bold;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--body-text-color); */
 }
-/* .site-title--small {
-  margin-bottom: 0.75rem;
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-.site-title--small a {
-  color: var(--heading-text-color);
-}
-.site-title--small a:hover,
-.site-title--small a:focus {
-  text-decoration: none;
-} */
-.site-header .primary-nav {
-  margin-bottom: 2rem;
-}
-.site-header .primary-nav a {
+.primary-nav a,
+.post-tags a {
   text-transform: lowercase;
+  margin-right: var(--spacing-sm);
 }
-.site-header .primary-nav a + a {
-  margin-left: 1rem;
-}
-.page-title {
-  margin-bottom: 2rem;
-}
-.post-title {
-  margin-bottom: 0.25rem;
-}
-.post-date {
-  margin-bottom: 2rem;
-  font-size: 1rem;
+.post-duration {
+  color: #8f8f8f; // what color should this be???
   text-transform: uppercase;
 }
-.list-itrem {
-  margin-top: 4rem;
-}
-.list-post-title {
-  margin-bottom: 0.25rem;
-}
-.list-post-title a:hover,
-.list-post-title a:focus {
-  text-decoration: none;
+.primary-nav a:last-child,
+.post-tags a:last-child {
+  margin-right: 0;
 }
 
-.site-footer {
-  font-size: 1rem;
-  color: darkgray;
-}
 #post-nav {
-  padding-top: 25px;
+  padding-top: var(--spacing-md);
 }
 #post-nav .prev {
-  padding-right: 10px;
-}
-.post-title {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  padding-right: var(--spacing-md);
 }

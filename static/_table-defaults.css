@@ -1,12 +1,12 @@
 table {
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-md);
   width: 100%;
   border: var(--border-solid);
   border-collapse: collapse;
 }
 td,
 th {
-  padding: 0.25rem 0.5rem;
+  padding: var(--spacing-xs) var(--spacing-sm);
   border: var(--border-solid);
 }
 tbody tr:nth-child(odd) td,

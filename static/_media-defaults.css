@@ -2,7 +2,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  margin: 0 0 1rem;
+  margin: 0 0 var(--spacing-md);
   border-radius: var(--border-radius);
 }
 video {
