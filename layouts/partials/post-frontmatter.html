@@ -16,6 +16,8 @@
   </h5>
 
   <h6 class="post-duration">
-    {{ .context.ReadingTime }} min read
+    <time datetime="PT0H{{.context.ReadingTime}}M0S">{{ .context.ReadingTime }} min</time> read
+    &nbsp;&bullet;&nbsp;
+    {{ .context.WordCount }} words
   </h6>
 </div>
