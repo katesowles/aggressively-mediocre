@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 
 <html lang="{{ .Site.LanguageCode | default "en-us" }}">
-  {{ partial "head" . }}
+  {{ partial "page-head" . }}
 
   <body>
-    {{ partial "header" . }}
+    {{ partial "page-header" . }}
 
-    {{ block "main" . }}{{ end }}
+    {{ block "page-main" . }}{{ end }}
 
-    {{ partial "footer" . }}
+    {{ partial "page-footer" . }}
   </body>
 </html>
