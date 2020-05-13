@@ -3,7 +3,16 @@
 <main class="constrained-section site-content page-single">
   <h3 class="page-title">{{ .Title }}</h3>
 
-  {{ .Content }}
+  <section class="content">
+    {{ .Content }}
+  </section>
+
+  <h6 class="page-duration">
+    Last Updated
+    <time datetime="{{ .Date.UTC.Format "Mon Jan 02 2006 15:04:05 MST-0700" }}">
+      {{ .Date.UTC.Format "Mon Jan 02 2006 15:04:05 MST-0700" }}
+    </time>
+  </h6>
 </main>
 
 {{ end }}
