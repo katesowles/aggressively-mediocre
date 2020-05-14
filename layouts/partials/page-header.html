@@ -2,18 +2,18 @@
 
 <header class="constrained-section responsive-section--top responsive-section--bottom site-header">
   <h1 class="site-title">
-    {{ .Site.Title }}
+    {{ range first 1 (where .Site.Pages.ByTitle "Kind" "home") }}
+      <a href="{{ .RelPermalink }}">{{ .Site.Title }}</a>
+    {{ end }}
   </h1>
 
   <nav class="primary-nav">
-    <h2 class="nav-link">
-      <a href="/">Posts</a>
-    </h2>
-
-    {{ range (where .Site.RegularPages.ByTitle "Section" "pages" ) }}
-      <h2 class="nav-link">
-        <a href="{{ .Permalink }}">{{ .Params.title | humanize | title }}</a>
-      </h2>
+    {{ range .Site.Pages.ByTitle }}
+      {{ if and (eq .Kind "page") (ne .Params.Title nil) (ne .Type "posts") }}
+        <h2 class="nav-link page">
+          <a href="{{ .RelPermalink }}">{{ .Params.Title | default .Type }}</a>
+        </h2>
+      {{ end }}
     {{ end }}
 
     {{ if and (.Site.Params.rssFeedLinkText) (.Site.Params.rssFeedLinkUrl) }}
