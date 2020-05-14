@@ -1,0 +1,30 @@
+{{ define "page-main" }}
+<!-- prettier-ignore -->
+<main class="constrained-section responsive-section--bottom site-content page-single">
+  <h3 class="taxonomylist-title">
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+  </h3>
+
+  <section class="content">
+    <ul>
+      {{ range .Data.Terms.Alphabetical }}
+        <li>
+          <h6>
+            <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+          </h6>
+
+          <ul>
+            {{ range .Pages }}
+              <li>
+                <h5>
+                  <a href="{{ .Page.Permalink }}">{{ .Page.LinkTitle }}</a>
+                </h5>
+              </li>
+            {{ end }}
+          </ul>
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+</main>
+{{ end }}
