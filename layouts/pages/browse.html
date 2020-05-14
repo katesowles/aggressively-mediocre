@@ -1,0 +1,37 @@
+{{ define "page-main" }}
+<!-- prettier-ignore -->
+
+<main class="constrained-section responsive-section--bottom site-content page-single">
+  <ul id="all-taxonomies">
+    {{ range $taxonomy_term, $taxonomy := .Site.Taxonomies }}
+      {{ with $.Site.GetPage (printf "/%s" $taxonomy_term) }}
+        <li>
+          <h3>
+            <a href="{{ .Permalink }}">{{ $taxonomy_term }}</a>
+          </h3>
+
+          <ul>
+            {{ range $key, $value := $taxonomy }}
+              <li>
+                <h6>
+                  <a href="/{{ $taxonomy_term }}/{{ $key }}">{{ $key }}</a>
+                </h6>
+
+                <ul>
+                  {{ range $value.Pages }}
+                    <li hugo-nav="{{ .RelPermalink}}">
+                      <h5>
+                        <a href="{{ .Permalink}}">{{ .LinkTitle }}</a>
+                      </h5>
+                    </li>
+                  {{ end }}
+                </ul>
+              </li>
+            {{ end }}
+          </ul>
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+</main>
+{{ end }}
