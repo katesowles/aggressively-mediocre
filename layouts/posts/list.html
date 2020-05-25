@@ -2,13 +2,11 @@
 <!-- prettier-ignore -->
 <main class="constrained-section responsive-section--bottom site-content post-list">
   {{ $posts := .Paginate (where .Site.RegularPages "Type" "in" "posts") }}
+  {{ $isUnabridged := false }} {{ if .Site.Params.listFullPosts }} {{ $isUnabridged = true}} {{ end }}
+
 
   {{ range $posts.Pages }}
-    {{ if .Site.Params.listFullPosts }}
-      {{ partial "post-unabridged" (dict "context" . "isInList" true) }}
-    {{ else }}
-      {{ partial "post-abridged" (dict "context" . "isInList" true) }}
-    {{ end }}
+    {{ partial "post-body" (dict "context" . "isInList" true "isUnabridged" $isUnabridged ) }}
   {{ end }}
 
   {{ partial "post-pagination" . }}
