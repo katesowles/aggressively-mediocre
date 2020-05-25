@@ -2,21 +2,23 @@ a,
 a:active,
 a:visited {
   color: var(--link-text-color);
+  margin: 0 -6px;
+  padding: 0 6px;
   text-decoration: none;
 
-  -webkit-box-shadow: inset 0px -5px 0px 0px rgba(153, 204, 0, 0.5);
-  -moz-box-shadow: inset 0px -5px 0px 0px rgba(153, 204, 0, 0.5);
-  box-shadow: inset 0px -5px 0px 0px rgba(153, 204, 0, 0.5);
+  -webkit-box-shadow: var(--box-shadow-default);
+  -moz-box-shadow: var(--box-shadow-default);
+  box-shadow: var(--box-shadow-default);
 
-  -webkit-transition: box-shadow 0.5s ease 0s, left 0.5s ease 0s;
-  -moz-transition: box-shadow 0.5s ease 0s, left 0.5s ease 0s;
-  transition: box-shadow 0.5s ease 0s, left 0.5s ease 0s;
+  -webkit-transition: box-shadow 0.4s ease-in-out;
+  -moz-transition: box-shadow 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out;
 }
 a:focus,
 a:hover {
-  -webkit-box-shadow: inset 0px -5px 0px 0px rgba(153, 204, 0, 1);
-  -moz-box-shadow: inset 0px -5px 0px 0px rgba(153, 204, 0, 1);
-  box-shadow: inset 0px -5px 0px 0px rgba(153, 204, 0, 1);
+  -webkit-box-shadow: var(--box-shadow-default--hover);
+  -moz-box-shadow: var(--box-shadow-default--hover);
+  box-shadow: var(--box-shadow-default--hover);
 }
 h1,
 h2,
@@ -39,15 +41,15 @@ h1 {
 h1 a,
 h1 a:active,
 h1 a:visited {
-  -webkit-box-shadow: inset 0px -12px 0px 0px rgba(153, 204, 0, 0.5);
-  -moz-box-shadow: inset 0px -12px 0px 0px rgba(153, 204, 0, 0.5);
-  box-shadow: inset 0px -12px 0px 0px rgba(153, 204, 0, 0.5);
+  -webkit-box-shadow: var(--box-shadow-large);
+  -moz-box-shadow: var(--box-shadow-large);
+  box-shadow: var(--box-shadow-large);
 }
 h1 a:focus,
 h1 a:hover {
-  -webkit-box-shadow: inset 0px -12px 0px 0px rgba(153, 204, 0, 1);
-  -moz-box-shadow: inset 0px -12px 0px 0px rgba(153, 204, 0, 1);
-  box-shadow: inset 0px -12px 0px 0px rgba(153, 204, 0, 1);
+  -webkit-box-shadow: var(--box-shadow-large--hover);
+  -moz-box-shadow: var(--box-shadow-large--hover);
+  box-shadow: var(--box-shadow-large--hover);
 }
 h2,
 h4 {
@@ -71,15 +73,15 @@ h3 {
 h3 a,
 h3 a:active,
 h3 a:visited {
-  -webkit-box-shadow: inset 0px -10px 0px 0px rgba(153, 204, 0, 0.5);
-  -moz-box-shadow: inset 0px -10px 0px 0px rgba(153, 204, 0, 0.5);
-  box-shadow: inset 0px -10px 0px 0px rgba(153, 204, 0, 0.5);
+  -webkit-box-shadow: var(--box-shadow-medium);
+  -moz-box-shadow: var(--box-shadow-medium);
+  box-shadow: var(--box-shadow-medium);
 }
 h3 a:focus,
 h3 a:hover {
-  -webkit-box-shadow: inset 0px -10px 0px 0px rgba(153, 204, 0, 1);
-  -moz-box-shadow: inset 0px -10px 0px 0px rgba(153, 204, 0, 1);
-  box-shadow: inset 0px -10px 0px 0px rgba(153, 204, 0, 1);
+  -webkit-box-shadow: var(--box-shadow-medium--hover);
+  -moz-box-shadow: var(--box-shadow-medium--hover);
+  box-shadow: var(--box-shadow-medium--hover);
 }
 h5 {
   /* post-date */
@@ -91,15 +93,15 @@ h5 {
 h5 a,
 h5 a:active,
 h5 a:visited {
-  -webkit-box-shadow: inset 0px -7px 0px 0px rgba(153, 204, 0, 0.5);
-  -moz-box-shadow: inset 0px -7px 0px 0px rgba(153, 204, 0, 0.5);
-  box-shadow: inset 0px -7px 0px 0px rgba(153, 204, 0, 0.5);
+  -webkit-box-shadow: var(--box-shadow-small);
+  -moz-box-shadow: var(--box-shadow-small);
+  box-shadow: var(--box-shadow-small);
 }
 h5 a:focus,
 h5 a:hover {
-  -webkit-box-shadow: inset 0px -7px 0px 0px rgba(153, 204, 0, 1);
-  -moz-box-shadow: inset 0px -7px 0px 0px rgba(153, 204, 0, 1);
-  box-shadow: inset 0px -7px 0px 0px rgba(153, 204, 0, 1);
+  -webkit-box-shadow: var(--box-shadow-small--hover);
+  -moz-box-shadow: var(--box-shadow-small--hover);
+  box-shadow: var(--box-shadow-small--hover);
 }
 h6 {
   /* post-duration */

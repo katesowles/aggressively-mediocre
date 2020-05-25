@@ -5,7 +5,7 @@
   --body-text-color: #2f2f2f;
   --heading-text-color: #2f2f2f;
   --link-text-color: #2f2f2f;
-  --link-underline-color: #99cc00; /* greenish */
+  --link-underline-color: rgba(153, 204, 0, 0.5); /* greenish */
   --code-text-color: #bf616a; /* redish */
   --blockquote-text-color: #7f7f7f;
 
@@ -15,6 +15,39 @@
   --border-solid-thin: 0.5px solid var(--border-color);
   --border-solid-thick: 0.5rem solid var(--border-color);
   --border-dotted: 1px dotted var(--border-color);
+
+  /* TODO: SCSS this super gnarly ish */
+  --box-shadow-expansion: 6px;
+  /* --box-shadow-expansion--neg: -6px; */
+
+  --full-expansion-default: -22px;
+  --full-expansion-small: -36px;
+  --full-expansion-medium: -42px;
+  --full-expansion-large: -48px;
+
+  /* prettier-ignore */
+  --box-shadow-default: inset 0px 6px 0px var(--box-shadow-expansion) var(--site-bg-color),
+    inset 0px -6px 0px 0px var(--link-underline-color);
+  --box-shadow-default--hover: inset 0px 0px 0px 0px var(--site-bg-color),
+    inset 0px -22px 0px 0px var(--link-underline-color);
+
+  /* prettier-ignore */
+  --box-shadow-small: inset 0px 4px 0px var(--box-shadow-expansion) var(--site-bg-color),
+    inset 0px -8px 0px 0px var(--link-underline-color);
+  --box-shadow-small--hover: inset 0px 0px 0px 0px var(--site-bg-color),
+    inset 0px -36px 0px 0px var(--link-underline-color);
+
+  /* prettier-ignore */
+  --box-shadow-medium: inset 0px 2px 0px var(--box-shadow-expansion) var(--site-bg-color),
+    inset 0px -10px 0px 0px var(--link-underline-color);
+  --box-shadow-medium--hover: inset 0px 0px 0px 0px var(--site-bg-color),
+    inset 0px -42px 0px 0px var(--link-underline-color);
+
+  /* prettier-ignore */
+  --box-shadow-large: inset 0px 0px 0px var(--box-shadow-expansion) var(--site-bg-color),
+    inset 0px -12px 0px 0px var(--link-underline-color);
+  --box-shadow-large--hover: inset 0px 0px 0px 0px var(--site-bg-color),
+    inset 0px -48px 0px 0px var(--link-underline-color);
 
   --enclosed-el-padding: 0.25rem 0.5rem;
   --spacing-xs: 0.25rem;
