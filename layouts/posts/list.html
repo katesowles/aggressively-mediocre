@@ -5,9 +5,9 @@
 
   {{ range $posts.Pages }}
     {{ if .Site.Params.listFullPosts }}
-      {{ partial "post-unabridged" (dict "context" . "isHome" .IsHome ) }}
+      {{ partial "post-unabridged" (dict "context" . "isInList" true) }}
     {{ else }}
-      {{ partial "post-abridged" (dict "context" . "isHome" .IsHome ) }}
+      {{ partial "post-abridged" (dict "context" . "isInList" true) }}
     {{ end }}
   {{ end }}
   

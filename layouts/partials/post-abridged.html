@@ -1,7 +1,7 @@
 <!-- prettier-ignore -->
 
 <article class="responsive-section--top post abridged">
-  {{ partial "post-frontmatter" (dict "context" .context "isHome" .isHome) }}
+  {{ partial "post-frontmatter" (dict "context" .context "isTitleLink" .isInList) }}
 
   <section class="content">
     {{ .context.Summary }}

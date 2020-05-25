@@ -2,7 +2,7 @@
   <!-- prettier-ignore -->
 
   <h3 class="post-title">
-    {{ if .isHome }}
+    {{ if .isTitleLink }}
       <a href="{{ .context.Permalink }}">{{ .context.Title }}</a>
     {{ else }}
       {{ .context.Title }}

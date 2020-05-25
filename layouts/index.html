@@ -1,20 +1,2 @@
-{{ define "page-main" }}
-<!-- CAN I PUT THIS BACK TO THE RENDER BUT WITH CONTEXT PASSED IN?? -->
 <!-- prettier-ignore -->
-
-<main class="constrained-section responsive-section--bottom site-content post-list">
-  {{ $posts := .Paginate (where .Site.RegularPages "Type" "in" "posts") }}
-  {{ $isHome := false }} {{ if .IsHome }} {{ $isHome = true }} {{ end }}
-  
-  {{ range $posts.Pages }}
-    {{ if .Site.Params.listFullPosts }}
-      {{ partial "post-unabridged" (dict "context" . "isHome" $isHome ) }}
-    {{ else }}
-      {{ partial "post-abridged" (dict "context" . "isHome" $isHome ) }}
-    {{ end }}
-  {{ end }}
-  
-  {{ partial "post-pagination" . }}
-</main>
-
-{{ end }}
+{{ range .Pages }} {{ .Render "list" }} {{ end }}
