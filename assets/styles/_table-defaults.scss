@@ -1,15 +1,17 @@
+@import "variables.scss";
+
 table {
-  margin-bottom: var(--spacing-md);
+  margin-bottom: $spacing-md;
   width: 100%;
-  border: var(--border-solid);
+  border: $border-solid;
   border-collapse: collapse;
 }
 td,
 th {
-  padding: var(--spacing-xs) var(--spacing-sm);
-  border: var(--border-solid);
+  padding: $spacing-xs $spacing-sm;
+  border: $border-solid;
 }
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
-  background-color: var(--alt-bg-color);
+  background-color: $alt-bg-color;
 }

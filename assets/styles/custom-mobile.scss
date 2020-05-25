@@ -1,32 +1,33 @@
-@import "_layout-defaults.css";
-@import "_list-defaults.css";
-@import "_media-defaults.css";
-@import "_table-defaults.css";
-@import "_text-defaults.css";
+@import "variables.scss";
+@import "_layout-defaults.scss";
+@import "_list-defaults.scss";
+@import "_media-defaults.scss";
+@import "_table-defaults.scss";
+@import "_text-defaults.scss";
 
 /* site structure (desktop sizes set in custom-tablet-desktop.css) */
 .constrained-section {
   max-width: 38rem;
   margin: 0 auto;
-  padding: 0 var(--spacing-md);
+  padding: 0 $spacing-md;
 }
 .responsive-section--top {
-  margin-top: var(--spacing-lg);
+  margin-top: $spacing-lg;
 }
 .responsive-section--bottom {
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: $spacing-lg;
 }
 .post:first-child {
   margin-top: 0;
 }
 .post-frontmatter {
-  margin-bottom: var(--spacing-md);
+  margin-bottom: $spacing-md;
 }
 
 /* pagination controls */
 #post-nav {
-  padding-top: var(--spacing-md);
+  padding-top: $spacing-md;
 }
 #post-nav .prev {
-  padding-right: var(--spacing-md);
+  padding-right: $spacing-md;
 }

@@ -1,58 +1,55 @@
-:root {
-  --site-bg-color: #ffffff;
-  --alt-bg-color: #efefef;
+$site-bg-color: #ffffff;
+$alt-bg-color: #efefef;
 
-  --body-text-color: #2f2f2f;
-  --heading-text-color: #2f2f2f;
-  --link-text-color: #2f2f2f;
-  --link-underline-color: rgba(153, 204, 0, 0.5); /* greenish */
-  --code-text-color: #bf616a; /* redish */
-  --blockquote-text-color: #7f7f7f;
+$body-text-color: #2f2f2f;
+$heading-color: #2f2f2f;
+$link-color: #2f2f2f;
+$link-underline-color: rgba(153, 204, 0, 0.5);
+$code-color: #bf616a;
+$blockquote-color: #7f7f7f;
 
-  --border-radius: 4px;
-  --border-color: #e5e5e5;
-  --border-solid: 1px solid var(--border-color);
-  --border-solid-thin: 0.5px solid var(--border-color);
-  --border-solid-thick: 0.5rem solid var(--border-color);
-  --border-dotted: 1px dotted var(--border-color);
+$border-radius: 4px;
+$border-color: #e5e5e5;
+$border-solid: 1px solid $border-color;
+$border-solid-thin: 0.5px solid $border-color;
+$border-solid-thick: 0.5rem solid $border-color;
+$border-dotted: 1px dotted $border-color;
 
-  /* TODO: SCSS this super gnarly ish */
-  --box-shadow-expansion: 6px;
-  /* --box-shadow-expansion--neg: -6px; */
+$box-shadow-expansion: 6px;
+/* --box-shadow-expansion--neg: -6px; */
 
-  --full-expansion-default: -22px;
-  --full-expansion-small: -36px;
-  --full-expansion-medium: -42px;
-  --full-expansion-large: -48px;
+$full-expansion-default: -22px;
+$full-expansion-small: -36px;
+$full-expansion-medium: -42px;
+$full-expansion-large: -48px;
 
-  /* prettier-ignore */
-  --box-shadow-default: inset 0px 6px 0px var(--box-shadow-expansion) var(--site-bg-color),
-    inset 0px -6px 0px 0px var(--link-underline-color);
-  --box-shadow-default--hover: inset 0px 0px 0px 0px var(--site-bg-color),
-    inset 0px -22px 0px 0px var(--link-underline-color);
+/* prettier-ignore */
+$box-shadow-default: inset 0px 6px 0px $box-shadow-expansion $site-bg-color,
+  inset 0px -6px 0px 0px $link-underline-color;
+$box-shadow-default--hover: inset 0px 0px 0px 0px $site-bg-color,
+  inset 0px -22px 0px 0px $link-underline-color;
 
-  /* prettier-ignore */
-  --box-shadow-small: inset 0px 4px 0px var(--box-shadow-expansion) var(--site-bg-color),
-    inset 0px -8px 0px 0px var(--link-underline-color);
-  --box-shadow-small--hover: inset 0px 0px 0px 0px var(--site-bg-color),
-    inset 0px -36px 0px 0px var(--link-underline-color);
+/* prettier-ignore */
+$box-shadow-small: inset 0px 4px 0px $box-shadow-expansion $site-bg-color,
+inset 0px -8px 0px 0px $link-underline-color;
+$box-shadow-small--hover: inset 0px 0px 0px 0px $site-bg-color,
+  inset 0px -36px 0px 0px $link-underline-color;
 
-  /* prettier-ignore */
-  --box-shadow-medium: inset 0px 2px 0px var(--box-shadow-expansion) var(--site-bg-color),
-    inset 0px -10px 0px 0px var(--link-underline-color);
-  --box-shadow-medium--hover: inset 0px 0px 0px 0px var(--site-bg-color),
-    inset 0px -42px 0px 0px var(--link-underline-color);
+/* prettier-ignore */
+$box-shadow-medium: inset 0px 2px 0px $box-shadow-expansion $site-bg-color,
+inset 0px -10px 0px 0px $link-underline-color;
+$box-shadow-medium--hover: inset 0px 0px 0px 0px $site-bg-color,
+  inset 0px -42px 0px 0px $link-underline-color;
 
-  /* prettier-ignore */
-  --box-shadow-large: inset 0px 0px 0px var(--box-shadow-expansion) var(--site-bg-color),
-    inset 0px -12px 0px 0px var(--link-underline-color);
-  --box-shadow-large--hover: inset 0px 0px 0px 0px var(--site-bg-color),
-    inset 0px -48px 0px 0px var(--link-underline-color);
+/* prettier-ignore */
+$box-shadow-large: inset 0px 0px 0px $box-shadow-expansion $site-bg-color,
+inset 0px -12px 0px 0px $link-underline-color;
+$box-shadow-large--hover: inset 0px 0px 0px 0px $site-bg-color,
+  inset 0px -48px 0px 0px $link-underline-color;
 
-  --enclosed-el-padding: 0.25rem 0.5rem;
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 5rem;
-}
+$enclosed-el-padding: 0.25rem 0.5rem;
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 2rem;
+$spacing-xl: 5rem;

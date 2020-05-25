@@ -1,8 +1,10 @@
+@import "variables.scss";
+
 ul,
 ol,
 dl {
   margin-top: 0;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: $spacing-md;
 }
 dt {
   font-weight: bold;

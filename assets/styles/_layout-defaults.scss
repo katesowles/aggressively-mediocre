@@ -1,3 +1,5 @@
+@import "variables.scss";
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -15,14 +17,14 @@ html {
   line-height: 1.6;
 }
 body {
-  color: var(--body-text-color);
-  background-color: var(--site-bg-color);
+  color: $body-text-color;
+  background-color: $site-bg-color;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 hr {
   border: 0;
-  border-top: var(--border-solid-thin);
-  border-bottom: var(--border-solid-thin);
-  margin: var(--spacing-md) auto;
+  border-top: $border-solid-thin;
+  border-bottom: $border-solid-thin;
+  margin: $spacing-md auto;
 }

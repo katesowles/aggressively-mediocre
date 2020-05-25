@@ -1,14 +1,16 @@
+@import "variables.scss";
+
 @media (min-width: 38rem) {
   html {
     font-size: 20px;
   }
   .constrained-section {
-    padding: 0 var(--spacing-md);
+    padding: 0 $spacing-md;
   }
   .responsive-section--top {
-    margin-top: var(--spacing-xl);
+    margin-top: $spacing-xl;
   }
   .responsive-section--bottom {
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: $spacing-xl;
   }
 }
