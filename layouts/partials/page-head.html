@@ -24,8 +24,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600&display=optional">
 
-  {{ $customMobileCss := resources.Get "styles/custom-mobile.scss" | resources.ToCSS (dict "targetPath" "customMobile.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-  {{ $customTabletDesktopCss := resources.Get "styles/custom-tablet-desktop.scss" | resources.ToCSS (dict "targetPath" "customTabletDesktop.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+  {{ $customMobileCss := resources.Get "styles/custom-mobile.scss" | resources.ToCSS }}
+  {{ $customTabletDesktopCss := resources.Get "styles/custom-tablet-desktop.scss" | resources.ToCSS }}
 
   <link rel="stylesheet" href="{{ $customMobileCss.Permalink | relURL }}" />
   <link rel="stylesheet" href="{{ $customTabletDesktopCss.Permalink | relURL }}" media="(min-width: 38rem)" />
