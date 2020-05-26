@@ -6,7 +6,6 @@ draft: true
 category: ["personal", "professional"]
 tag:
   [
-    "ADD",
     "ADHD",
     "anxiety",
     "career",
