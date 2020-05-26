@@ -20,6 +20,8 @@
 
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
 
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600&display=optional">
 
   {{ $customMobileCss := resources.Get "styles/custom-mobile.scss" | resources.ToCSS (dict "targetPath" "customMobile.css" "outputStyle" "compressed" "enableSourceMap" true) }}
