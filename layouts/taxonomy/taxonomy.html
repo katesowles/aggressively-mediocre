@@ -1,7 +1,9 @@
 {{ define "page-main" }}
+<!-- this is the page that shows at /categories/:category and /tags/:tag -->
+
 <!-- prettier-ignore -->
 <main class="constrained-section responsive-section--bottom site-content page-single">
-  <h3 class="taxonomy-title">{{ .Title }}</h3>
+  <h3 class="taxonomy-title">{{ lower .Title }}</h3>
 
   <section class="content">
     <ul>

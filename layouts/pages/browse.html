@@ -1,22 +1,18 @@
 {{ define "page-main" }}
-<!-- prettier-ignore -->
+<!-- this is the page that shows at /browse -->
 
+<!-- prettier-ignore -->
 <main class="constrained-section responsive-section--bottom site-content page-single">
-  <ul id="all-taxonomies">
+  <section class="all-taxonomies">
     {{ range $taxonomy_term, $taxonomy := .Site.Taxonomies }}
       {{ with $.Site.GetPage (printf "/%s" $taxonomy_term) }}
-        <li>
-          <h3>
-            <a href="{{ .RelPermalink }}">{{ $taxonomy_term }}</a>
-          </h3>
+        <div class="taxonomy">
+          <h3>{{ $taxonomy_term }}</h3>
 
           <ul>
             {{ range $key, $value := $taxonomy }}
               <li>
-                <h6>
-                  <a href="/{{ $taxonomy_term }}/{{ $key }}">{{ $key }}</a>
-                </h6>
-
+                <h6>{{ $key }}</h6>
                 <ul>
                   {{ range $value.Pages }}
                     <li>
@@ -29,9 +25,9 @@
               </li>
             {{ end }}
           </ul>
-        </li>
+        </div>
       {{ end }}
     {{ end }}
-  </ul>
+  </section>
 </main>
 {{ end }}

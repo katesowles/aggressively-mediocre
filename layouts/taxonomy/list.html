@@ -1,8 +1,10 @@
 {{ define "page-main" }}
+<!-- this is the page that shows at /categories and /tags -->
+
 <!-- prettier-ignore -->
 <main class="constrained-section responsive-section--bottom site-content page-single">
   <h3 class="taxonomylist-title">
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ lower .Title }}
   </h3>
 
   <section class="content">
@@ -10,7 +12,7 @@
       {{ range .Data.Terms.Alphabetical }}
         <li>
           <h6>
-            <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+            {{ lower .Page.Title }}
           </h6>
 
           <ul>
