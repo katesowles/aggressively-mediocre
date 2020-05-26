@@ -2,7 +2,7 @@
 <!-- prettier-ignore -->
 <main class="constrained-section responsive-section--bottom site-content page-single">
   <h3 class="taxonomylist-title">
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
   </h3>
 
   <section class="content">
@@ -10,14 +10,14 @@
       {{ range .Data.Terms.Alphabetical }}
         <li>
           <h6>
-            <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+            <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
           </h6>
 
           <ul>
             {{ range .Pages }}
               <li>
                 <h5>
-                  <a href="{{ .Page.Permalink }}">{{ .Page.LinkTitle }}</a>
+                  <a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a>
                 </h5>
               </li>
             {{ end }}

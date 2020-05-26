@@ -3,7 +3,7 @@
 
   <h3 class="post-title">
     {{ if .isTitleLink }}
-      <a href="{{ .context.Permalink }}">{{ .context.Title }}</a>
+      <a href="{{ .context.RelPermalink }}">{{ .context.Title }}</a>
     {{ else }}
       {{ .context.Title }}
     {{ end }}
