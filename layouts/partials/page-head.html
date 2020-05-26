@@ -23,8 +23,8 @@
   {{ $customMobileCss := resources.Get "styles/custom-mobile.scss" | resources.ToCSS (dict "targetPath" "customMobile.css" "outputStyle" "compressed" "enableSourceMap" true) }}
   {{ $customTabletDesktopCss := resources.Get "styles/custom-tablet-desktop.scss" | resources.ToCSS (dict "targetPath" "customTabletDesktop.css" "outputStyle" "compressed" "enableSourceMap" true) }}
 
-    <link rel="stylesheet" href="{{ $customMobileCss.Permalink | relURL }}" />
-    <link rel="stylesheet" href="{{ $customTabletDesktopCss.Permalink | relURL }}" media="(min-width: 38rem)" />
+  <link rel="stylesheet" href="{{ $customMobileCss.Permalink | relURL }}" />
+  <link rel="stylesheet" href="{{ $customTabletDesktopCss.Permalink | relURL }}" media="(min-width: 38rem)" />
 
   {{ if and (.Site.Params.rssFeedLinkText) (.Site.Params.rssFeedLinkUrl) }}
     <link rel="alternate" type="application/rss+xml" href="{{ .Site.Params.rssFeedLinkUrl }}" title="{{ .Site.Title }}" />
