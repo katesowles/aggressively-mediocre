@@ -6,12 +6,18 @@ table {
   border: $border-solid;
   border-collapse: collapse;
 }
+
 td,
 th {
   padding: $spacing-xs $spacing-sm;
   border: $border-solid;
 }
-tbody tr:nth-child(odd) td,
-tbody tr:nth-child(odd) th {
-  background-color: $alt-bg-color;
+
+tbody {
+  tr:nth-child(odd) {
+    td,
+    th {
+      background-color: $alt-bg-color;
+    }
+  }
 }

@@ -1,28 +1,19 @@
 @import "variables.scss";
 @import "mixins.scss";
 
-a,
-a:active,
-a:visited {
-  color: $link-color;
-  margin: 0 -6px;
-  padding: 0 6px;
-  text-decoration: none;
+a {
+  &,
+  &:active,
+  &:visited {
+    color: $link-color;
+    margin: 0 -$highlight-height;
+    padding: 0 $highlight-height;
+    text-decoration: none;
 
-  -webkit-box-shadow: $box-shadow-default;
-  -moz-box-shadow: $box-shadow-default;
-  box-shadow: $box-shadow-default;
+    @include link-highlights(-6px, -22px);
+  }
+}
 
-  -webkit-transition: box-shadow 0.4s ease-in-out;
-  -moz-transition: box-shadow 0.4s ease-in-out;
-  transition: box-shadow 0.4s ease-in-out;
-}
-a:focus,
-a:hover {
-  -webkit-box-shadow: $box-shadow-default--hover;
-  -moz-box-shadow: $box-shadow-default--hover;
-  box-shadow: $box-shadow-default--hover;
-}
 h1,
 h2,
 h3,
@@ -35,25 +26,18 @@ h6 {
   line-height: 1.1;
   margin: 0;
 }
+
 h1 {
   /* site-title */
   font-size: 2.25rem;
   font-weight: normal;
   margin: 0 0 $spacing-sm;
+
+  a {
+    @include link-highlights(-12px, -48px);
+  }
 }
-h1 a,
-h1 a:active,
-h1 a:visited {
-  -webkit-box-shadow: $box-shadow-large;
-  -moz-box-shadow: $box-shadow-large;
-  box-shadow: $box-shadow-large;
-}
-h1 a:focus,
-h1 a:hover {
-  -webkit-box-shadow: $box-shadow-large--hover;
-  -moz-box-shadow: $box-shadow-large--hover;
-  box-shadow: $box-shadow-large--hover;
-}
+
 h2,
 h4 {
   /* h2: nav-link */
@@ -63,49 +47,34 @@ h4 {
   font-weight: normal;
   margin: 0 $spacing-sm 0 0;
   text-transform: lowercase;
+
+  &::last-child {
+    margin-right: 0;
+  }
 }
-h2:last-child,
-h4:last-child {
-  margin-right: 0;
-}
+
 h3 {
   /* page-title + post-title */
   font-size: 1.75rem;
   margin: 0 0 $spacing-sm;
+
+  a {
+    @include link-highlights(-10px, -42px);
+  }
 }
-h3 a,
-h3 a:active,
-h3 a:visited {
-  -webkit-box-shadow: $box-shadow-medium;
-  -moz-box-shadow: $box-shadow-medium;
-  box-shadow: $box-shadow-medium;
-}
-h3 a:focus,
-h3 a:hover {
-  -webkit-box-shadow: $box-shadow-medium--hover;
-  -moz-box-shadow: $box-shadow-medium--hover;
-  box-shadow: $box-shadow-medium--hover;
-}
+
 h5 {
   /* post-date */
   font-size: 1.25rem;
   letter-spacing: 1px;
   margin: 0 0 $spacing-sm;
   text-transform: uppercase;
+
+  a {
+    @include link-highlights(-8px, -36px);
+  }
 }
-h5 a,
-h5 a:active,
-h5 a:visited {
-  -webkit-box-shadow: $box-shadow-small;
-  -moz-box-shadow: $box-shadow-small;
-  box-shadow: $box-shadow-small;
-}
-h5 a:focus,
-h5 a:hover {
-  -webkit-box-shadow: $box-shadow-small--hover;
-  -moz-box-shadow: $box-shadow-small--hover;
-  box-shadow: $box-shadow-small--hover;
-}
+
 h6 {
   /* post-duration */
   /* page-date */
@@ -115,6 +84,7 @@ h6 {
   margin: 0 0 $spacing-sm;
   text-transform: uppercase;
 }
+
 p {
   margin: 0 0 $spacing-md;
 }
@@ -130,33 +100,40 @@ ol + h2,
 ol + h3 {
   margin-top: $spacing-md;
 }
+
 strong {
   color: inherit;
   font-weight: bold;
 }
+
 abbr {
   font-size: 1rem;
   font-weight: bold;
   color: $heading-color;
   text-transform: uppercase;
+
+  &[title] {
+    cursor: help;
+    border-bottom: $border-dotted;
+  }
 }
-abbr[title] {
-  cursor: help;
-  border-bottom: $border-dotted;
-}
+
 blockquote {
   padding: 0 0 0 $spacing-md;
   margin: 0 $spacing-lg $spacing-md 0;
   color: $blockquote-color;
   border-left: $border-solid-thick;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
-blockquote p:last-child {
-  margin-bottom: 0;
-}
+
 code,
 pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
 }
+
 code {
   padding: $spacing-xs $spacing-sm;
   font-size: 1rem;
@@ -164,6 +141,7 @@ code {
   background-color: $alt-bg-color;
   border-radius: $border-radius;
 }
+
 pre {
   display: block;
   margin-top: 0;
@@ -175,13 +153,15 @@ pre {
   white-space: pre-wrap;
   word-break: break-all;
   background-color: $alt-bg-color;
+
+  code {
+    padding: 0;
+    font-size: 1rem;
+    color: inherit;
+    background-color: transparent;
+  }
 }
-pre code {
-  padding: 0;
-  font-size: 1rem;
-  color: inherit;
-  background-color: transparent;
-}
+
 time {
   text-transform: uppercase;
 }

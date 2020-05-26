@@ -1,20 +1,26 @@
-.gist .gist-file {
-  font-family: Menlo, Monaco, "Courier New", monospace !important;
-}
-.gist .markdown-body {
-  padding: var(--spacing-md);
-}
-.gist pre {
-  padding: 0;
-  background-color: transparent;
-}
-.gist .gist-file .gist-data {
-  font-size: 1rem !important;
-  line-height: 1.4;
-}
-.gist code {
-  padding: 0;
-  color: inherit;
-  background-color: transparent;
-  border-radius: 0;
+.gist {
+  .gist-file {
+    font-family: Menlo, Monaco, "Courier New", monospace !important;
+
+    .gist-data {
+      font-size: 1rem !important;
+      line-height: 1.4;
+    }
+  }
+
+  .markdown-body {
+    padding: var(--spacing-md);
+  }
+
+  pre {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  code {
+    padding: 0;
+    color: inherit;
+    background-color: transparent;
+    border-radius: 0;
+  }
 }

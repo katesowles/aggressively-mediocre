@@ -1,1 +1,41 @@
 @import "variables.scss";
+
+@mixin prefix($property, $value) {
+  // adds the major vendor prefixes
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
+  $property: $value;
+}
+
+@mixin link-highlights($vertical-default, $vertical-expanded) {
+  // $vertical-default = the (negative) height needed to touch the bottom text
+  // $vertical-expanded = the (negative) height needed to cover text on hover
+  // usage example: @include link-highlights(-6px, -22px);
+  $offset: (2 * $highlight-height) + $vertical-default;
+
+  @if $offset < 0 {
+    $offset: 0px;
+  }
+
+  $box-shadow-default: inset 0px $offset 0px $highlight-height $site-bg-color,
+    inset 0px $vertical-default 0px 0px $highlight-color;
+  $box-shadow-hover: inset 0px 0px 0px 0px $site-bg-color,
+    inset 0px $vertical-expanded 0px 0px $highlight-color;
+
+  &,
+  &:active,
+  &:visited {
+    // box-shadow: $box-shadow-default;
+    // transition: box-shadow 0.4s ease-in-out;
+    @include prefix(box-shadow, $box-shadow-default);
+    @include prefix(transition, box-shadow 0.4s ease-in-out);
+  }
+
+  &:focus,
+  &:hover {
+    // box-shadow: $box-shadow-hover;
+    @include prefix(box-shadow, $box-shadow-hover);
+  }
+}

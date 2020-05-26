@@ -11,15 +11,19 @@
   margin: 0 auto;
   padding: 0 $spacing-md;
 }
+
 .responsive-section--top {
   margin-top: $spacing-lg;
 }
+
 .responsive-section--bottom {
   margin-bottom: $spacing-lg;
 }
-.post:first-child {
+
+.post::first-child {
   margin-top: 0;
 }
+
 .post-frontmatter {
   margin-bottom: $spacing-md;
 }
@@ -27,7 +31,8 @@
 /* pagination controls */
 #post-nav {
   padding-top: $spacing-md;
-}
-#post-nav .prev {
-  padding-right: $spacing-md;
+
+  .prev {
+    padding-right: $spacing-md;
+  }
 }
