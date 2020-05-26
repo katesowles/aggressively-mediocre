@@ -21,7 +21,7 @@ h4,
 h5,
 h6 {
   color: $heading-color;
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: -0.025rem;
   line-height: 1.1;
   margin: 0;
@@ -30,7 +30,7 @@ h6 {
 h1 {
   /* site-title */
   font-size: 2.25rem;
-  font-weight: normal;
+  font-weight: 300;
   margin: 0 0 $spacing-sm;
 
   a {
@@ -44,7 +44,7 @@ h4 {
   /* h4: post-tag */
   display: inline-block;
   font-size: 1rem;
-  font-weight: normal;
+  font-weight: 300;
   margin: 0 $spacing-sm 0 0;
   text-transform: lowercase;
 
@@ -114,12 +114,12 @@ li {
 
 strong {
   color: inherit;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 abbr {
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
   color: $heading-color;
   text-transform: uppercase;
 
