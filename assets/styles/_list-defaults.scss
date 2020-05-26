@@ -16,7 +16,7 @@ dd {
 }
 
 ul {
-  list-style: inside circle;
+  list-style: inside disc;
   padding-left: 0;
 
   ul,
@@ -42,5 +42,18 @@ ol {
 
   li {
     margin-bottom: 0.25rem;
+  }
+}
+
+ul,
+ol {
+  ul {
+    list-style: inside circle;
+    padding-left: 1rem;
+
+    ul {
+      list-style: inside none;
+      padding-left: 1.4rem;
+    }
   }
 }
