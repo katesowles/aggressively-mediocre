@@ -4,11 +4,4 @@
 <main class="constrained-section responsive-section--bottom site-content post-single">
   {{ partial "post-body" (dict "context" . "isInList" false "isUnabridged" true) }}
 </main>
-
-<!-- {{ if .Site.Params.include_conversation }}
-<script
-  type="text/javascript"
-  src="https://micro.blog/conversation.js?url={{ .Permalink }}"
-></script>
-{{ end }} -->
 {{ end }}
