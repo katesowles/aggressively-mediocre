@@ -15,7 +15,14 @@
             <ul>
               {{ range $key, $value := $taxonomy }}
                 <li>
-                  <h6>{{ $key }}</h6>
+                  <h6>
+                    {{ $postCount := len $value.Pages}}
+                    {{ if ge $postCount 1 }}
+                      <a href="/{{ $taxonomy_term }}/{{ $key }}">{{ $key }} ({{ $postCount }})</a>
+                    {{ else }}
+                      {{ $key }} ({{ $postCount }})
+                    {{ end }}
+                  </h6>
                   <ul>
                     {{ range $value.Pages }}
                       <li>
