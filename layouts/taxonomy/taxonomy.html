@@ -3,20 +3,25 @@
 
 <!-- prettier-ignore -->
 <main class="constrained-section responsive-section--bottom site-content page-single">
-  <h3 class="taxonomy-title">{{ lower .Title }}</h3>
-
   <section class="content">
-    <ul>
-      {{ range .Pages }}
-      
-      <li>
-        <h5>
-          <a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a>
-        </h5>
-      </li>
-      
-      {{ end }}
-    </ul>
+    <div>
+      <h3>posts with {{ .Data.Singular }} "{{ lower .Title }}"</h3>
+
+      <ul>
+        {{ range .Pages }}
+          <li>
+            <h6>
+              <a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a>
+              <span>
+                published&nbsp;<time datetime="{{ .Page.PublishDate.UTC.Format "02 Jan 2006" }}">
+                  {{- .Page.PublishDate.UTC.Format "02 Jan 2006" -}}
+                </time>
+              </span>
+            </h6>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
   </section>
 </main>
 {{ end }}

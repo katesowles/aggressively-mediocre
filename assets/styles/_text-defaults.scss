@@ -83,6 +83,14 @@ h6 {
   letter-spacing: 1px;
   margin: 0 0 $spacing-sm;
   text-transform: uppercase;
+
+  > span {
+    color: $light-text-color;
+    font-size: 0.85rem;
+    font-weight: 300;
+    text-transform: none;
+    margin-left: 0.5rem;
+  }
 }
 
 p {

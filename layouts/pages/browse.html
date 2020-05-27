@@ -3,31 +3,15 @@
 
 <!-- prettier-ignore -->
 <main class="constrained-section responsive-section--bottom site-content page-single">
-  <section class="all-taxonomies">
-    {{ range $taxonomy_term, $taxonomy := .Site.Taxonomies }}
+  <section class="content columns">
+    {{ range $term_title, $taxonomy := .Site.Taxonomies }}
       {{ $taxonomyCount := len $taxonomy }}
 
-      {{ if ge $taxonomyCount 2 }}
-        {{ with $.Site.GetPage (printf "/%s" $taxonomy_term) }}
-          <div class="taxonomy">
-            <h3>{{ $taxonomy_term }}</h3>
+      {{ if ge $taxonomyCount 1 }}
+        {{ $title := $term_title }}
+        {{ $list :=  $taxonomy.Alphabetical }}
 
-            <ul>
-              {{ range $key, $value := $taxonomy }}
-                <li>
-                  <h6>
-                    {{ $postCount := len $value.Pages}}
-                    {{ if ge $postCount 1 }}
-                      <a href="/{{ $taxonomy_term }}/{{ $key }}">{{ $key }} ({{ $postCount }})</a>
-                    {{ else }}
-                      {{ $key }} ({{ $postCount }})
-                    {{ end }}
-                  </h6>
-                </li>
-              {{ end }}
-            </ul>
-          </div>
-        {{ end }}
+        {{ partial "taxonomy-list" (dict "context" . "title" $title "list" $list ) }}
       {{ end }}
     {{ end }}
   </section>
