@@ -34,3 +34,14 @@
     padding-right: $spacing-md;
   }
 }
+
+.columns {
+  display: flex;
+  flex-direction: column;
+
+  > div {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

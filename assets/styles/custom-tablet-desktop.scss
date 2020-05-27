@@ -13,4 +13,26 @@
   .responsive-section--bottom {
     margin-bottom: $spacing-xl;
   }
+
+  .columns {
+    flex-direction: row;
+
+    > div {
+      padding-left: 1rem;
+      padding-right: 1rem;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      &:only-child {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
 }
