@@ -23,15 +23,6 @@
                       {{ $key }} ({{ $postCount }})
                     {{ end }}
                   </h6>
-                  <ul>
-                    {{ range $value.Pages }}
-                      <li>
-                        <h5>
-                          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-                        </h5>
-                      </li>
-                    {{ end }}
-                  </ul>
                 </li>
               {{ end }}
             </ul>
