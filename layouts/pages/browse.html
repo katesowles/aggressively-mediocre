@@ -5,27 +5,31 @@
 <main class="constrained-section responsive-section--bottom site-content page-single">
   <section class="all-taxonomies">
     {{ range $taxonomy_term, $taxonomy := .Site.Taxonomies }}
-      {{ with $.Site.GetPage (printf "/%s" $taxonomy_term) }}
-        <div class="taxonomy">
-          <h3>{{ $taxonomy_term }}</h3>
+      {{ $taxonomyCount := len $taxonomy }}
 
-          <ul>
-            {{ range $key, $value := $taxonomy }}
-              <li>
-                <h6>{{ $key }}</h6>
-                <ul>
-                  {{ range $value.Pages }}
-                    <li>
-                      <h5>
-                        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-                      </h5>
-                    </li>
-                  {{ end }}
-                </ul>
-              </li>
-            {{ end }}
-          </ul>
-        </div>
+      {{ if ge $taxonomyCount 2 }}
+        {{ with $.Site.GetPage (printf "/%s" $taxonomy_term) }}
+          <div class="taxonomy">
+            <h3>{{ $taxonomy_term }}</h3>
+
+            <ul>
+              {{ range $key, $value := $taxonomy }}
+                <li>
+                  <h6>{{ $key }}</h6>
+                  <ul>
+                    {{ range $value.Pages }}
+                      <li>
+                        <h5>
+                          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                        </h5>
+                      </li>
+                    {{ end }}
+                  </ul>
+                </li>
+              {{ end }}
+            </ul>
+          </div>
+        {{ end }}
       {{ end }}
     {{ end }}
   </section>
