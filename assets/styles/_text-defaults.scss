@@ -10,7 +10,7 @@ a {
     padding: 0 $highlight-height;
     text-decoration: none;
 
-    @include link-highlights(-6px, -22px);
+    @include link-highlights(6px, 22px);
   }
 }
 
@@ -34,7 +34,7 @@ h1 {
   margin: 0 0 $spacing-sm;
 
   a {
-    @include link-highlights(-12px, -48px);
+    @include link-highlights(12px, 48px);
   }
 }
 
@@ -59,7 +59,7 @@ h3 {
   margin: 0 0 $spacing-sm;
 
   a {
-    @include link-highlights(-10px, -42px);
+    @include link-highlights(10px, 42px);
   }
 }
 
@@ -71,7 +71,7 @@ h5 {
   text-transform: uppercase;
 
   a {
-    @include link-highlights(-8px, -36px);
+    @include link-highlights(8px, 36px);
   }
 }
 
