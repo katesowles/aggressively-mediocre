@@ -5,14 +5,14 @@
   <ul>
     {{ range .list }}
     <li>
-      <h6>
-        {{ $postCount := len .Pages}}
-        {{ if ge $postCount 1 }}
+      {{ $postCount := len .Pages}}
+      {{ if ge $postCount 1 }}
         <a href="/{{ .Page.Type }}/{{ .Page.Title }}">
           {{ .Page.Title }} ({{ $postCount }})
         </a>
-        {{ else }} {{ .Data.Term }} ({{ $postCount }}) {{ end }}
-      </h6>
+      {{ else }}
+        {{ .Data.Term }} ({{ $postCount }})
+      {{ end }}
     </li>
     {{ end }}
   </ul>

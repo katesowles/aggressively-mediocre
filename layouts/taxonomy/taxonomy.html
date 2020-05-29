@@ -10,14 +10,12 @@
       <ul>
         {{ range .Pages }}
           <li>
-            <h6>
-              <a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a>
-              <span>
-                published&nbsp;<time datetime="{{ .Page.PublishDate.UTC.Format "02 Jan 2006" }}">
-                  {{- .Page.PublishDate.UTC.Format "02 Jan 2006" -}}
-                </time>
-              </span>
-            </h6>
+            <a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a>
+            <small>
+              published&nbsp;<time datetime="{{ .Page.PublishDate.UTC.Format "02 Jan 2006" }}">
+                {{- .Page.PublishDate.UTC.Format "02 Jan 2006" -}}
+              </time>
+            </small>
           </li>
         {{ end }}
       </ul>

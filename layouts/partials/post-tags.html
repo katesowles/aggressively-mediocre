@@ -2,7 +2,6 @@
   {{ range .Params.tags }}
   <h4 class="post-tag">
     {{/* NOTE: the 'replace' exchanges a breaking space with a non-breaking space so tag names don't wrap */}}
-    <a href="{{ "./tags/" | relLangURL }}{{ . | urlize }}">{{ replace . " " "\u00A0" }}</a>
-  </h4>
+    <a class="post-tag" href="{{ "./tags/" | relLangURL }}{{ . | urlize }}">{{ replace . " " "\u00A0" }}</a>
   {{ end }}
 </div>

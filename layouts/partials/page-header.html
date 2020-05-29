@@ -10,16 +10,12 @@
   <nav class="primary-nav">
     {{ range .Site.Pages.ByTitle }}
       {{ if and (eq .Kind "page") (ne .Params.Title nil) (ne .Type "posts") }}
-        <h2 class="nav-link page">
-          <a href="{{ .RelPermalink }}">{{ .Params.Title | default .Type }}</a>
-        </h2>
+        <a class="nav-link page" href="{{ .RelPermalink }}">{{ .Params.Title | default .Type }}</a>
       {{ end }}
     {{ end }}
 
     {{ if and (.Site.Params.rssFeedLinkText) (.Site.Params.rssFeedLinkUrl) }}
-      <h2 class="nav-link rss-feed">
-        <a href="{{ .Site.Params.rssFeedLinkUrl }}">{{ .Site.Params.rssFeedLinkText }}</a>
-      </h2>
+      <a class="nav-link rss-feed" href="{{ .Site.Params.rssFeedLinkUrl }}">{{ .Site.Params.rssFeedLinkText }}</a>
     {{ end }}
   </nav>
 </header>
