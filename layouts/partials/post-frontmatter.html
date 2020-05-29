@@ -1,13 +1,13 @@
 <div class="post-frontmatter">
   <!-- prettier-ignore -->
 
-  <h3 class="post-title">
+  <h2 class="post-title">
     {{ if .isTitleLink }}
       <a href="{{ .context.RelPermalink }}">{{ .context.Title }}</a>
     {{ else }}
       {{ .context.Title }}
     {{ end }}
-  </h3>
+  </h2>
 
   <h5 class="post-date">
     <time datetime="{{ .context.Date.UTC.Format "Mon Jan 02 2006 15:04:05 MST-0700" }}">
