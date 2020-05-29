@@ -9,17 +9,17 @@
     {{ end }}
   </h2>
 
-  <h5 class="post-date">
+  <p class="post-date">
     <time datetime="{{ .context.Date.UTC.Format "Mon Jan 02 2006 15:04:05 MST-0700" }}">
       {{ .context.Date.UTC.Format "Mon Jan 02 2006 15:04:05 MST-0700" }}
     </time>
-  </h5>
+  </p>
 
-  <h6 class="post-duration">
+  <p class="post-duration">
     <time datetime="PT0H{{ .context.ReadingTime }}M0S">{{ .context.ReadingTime }} min</time> read
     &nbsp;&bullet;&nbsp;
     {{ .context.WordCount }} words
-  </h6>
+  </p>
 
   {{ partial "post-tags" .context }}
 </div>
