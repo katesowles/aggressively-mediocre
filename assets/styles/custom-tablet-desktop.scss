@@ -1,25 +1,28 @@
 @import "variables.scss";
 
-@media (min-width: 38rem) {
+@media (min-width: $site-breakpoint) {
   html {
-    font-size: 20px;
+    font-size: $textroot-desktop;
   }
+
   .constrained-section {
-    padding: 0 $spacing-md;
+    padding: 0 $spacer-md;
   }
+
   .responsive-section--top {
-    margin-top: $spacing-xl;
+    margin-top: $spacer-xl;
   }
+
   .responsive-section--bottom {
-    margin-bottom: $spacing-xl;
+    margin-bottom: $spacer-xl;
   }
 
   .columns {
     flex-direction: row;
 
     > div {
-      padding-left: 1rem;
-      padding-right: 1rem;
+      padding-left: $spacer-md;
+      padding-right: $spacer-md;
 
       &:first-child {
         padding-left: 0;

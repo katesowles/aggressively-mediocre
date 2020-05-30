@@ -36,6 +36,7 @@ p {
 
 small {
   @include textbase-body();
+  @include textweight-normal();
   color: $textcolor-light;
   font-size: $textsize-xs;
   text-transform: initial;
