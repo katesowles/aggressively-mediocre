@@ -2,7 +2,7 @@
 <!-- this is the page that shows at /browse -->
 
 <!-- prettier-ignore -->
-<main class="constrained-section responsive-section--bottom site-content page-single">
+<main role="main" class="constrained-section responsive-section--bottom site-content page-single">
   <section class="content columns">
     {{ range $term_title, $taxonomy := .Site.Taxonomies }}
       {{ $taxonomyCount := len $taxonomy }}
