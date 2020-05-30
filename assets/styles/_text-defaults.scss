@@ -2,99 +2,43 @@
 @import "mixins.scss";
 
 a {
-  &,
-  &:active,
-  &:visited {
-    color: $link-color;
-    margin: 0 -$highlight-height;
-    padding: 0 $highlight-height;
-    text-decoration: none;
-
-    @include link-highlights(6px, 22px);
-  }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $heading-color;
-  font-weight: 600;
-  letter-spacing: -0.025rem;
-  line-height: 1.1;
-  margin: 0;
+  @include link-highlights(6px, 22px);
+  color: $textcolor-default;
+  text-decoration: none;
 }
 
 h1 {
-  /* site-title */
-  font-size: 2.25rem;
-  font-weight: 300;
-  margin: 0 0 $spacing-sm;
-
-  a {
-    @include link-highlights(12px, 48px);
-  }
+  // site title
+  @include heading-xl();
 }
 
-h2,
-h4 {
-  /* h2: nav-link */
-  /* h4: post-tag */
-  display: inline-block;
-  font-size: 1rem;
-  font-weight: 300;
-  margin: 0 $spacing-sm 0 0;
-  text-transform: lowercase;
-
-  &::last-child {
-    margin-right: 0;
-  }
+h2 {
+  // page titles and post titles
+  @include heading-lg();
 }
 
 h3 {
-  /* page-title + post-title */
-  font-size: 1.75rem;
-  margin: 0 0 $spacing-sm;
-
-  a {
-    @include link-highlights(10px, 42px);
-  }
+  @include heading-md();
 }
 
-h5 {
-  /* post-date */
-  font-size: 1.25rem;
-  letter-spacing: 1px;
-  margin: 0 0 $spacing-sm;
-  text-transform: uppercase;
-
-  a {
-    @include link-highlights(8px, 36px);
-  }
+h4 {
+  @include heading-sm();
 }
 
+h5,
 h6 {
-  /* post-duration */
-  /* page-date */
-  display: inline-block;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  margin: 0 0 $spacing-sm;
-  text-transform: uppercase;
-
-  > span {
-    color: $light-text-color;
-    font-size: 0.85rem;
-    font-weight: 300;
-    text-transform: none;
-    margin-left: 0.5rem;
-  }
+  @include heading-xs();
 }
 
 p {
-  margin: 0 0 $spacing-md;
+  @include body();
+}
+
+small {
+  @include textbase-body();
+  color: $textcolor-light;
+  font-size: $textsize-xs;
+  text-transform: initial;
 }
 
 p + h1,
@@ -106,7 +50,7 @@ ul + h3,
 ol + h1,
 ol + h2,
 ol + h3 {
-  margin-top: $spacing-md;
+  margin-top: $spacer-md;
 }
 
 li {
@@ -121,26 +65,26 @@ li {
 }
 
 strong {
+  @include textweight-bold();
   color: inherit;
-  font-weight: 600;
 }
 
 abbr {
-  font-size: 1rem;
-  font-weight: 600;
-  color: $heading-color;
-  text-transform: uppercase;
+  @include textweight-bold();
+  @include textcase-uppercase();
+  font-size: $textsize-sm;
+  color: $textcolor-default;
 
   &[title] {
-    cursor: help;
     border-bottom: $border-dotted;
+    cursor: help;
   }
 }
 
 blockquote {
-  padding: 0 0 0 $spacing-md;
-  margin: 0 $spacing-lg $spacing-md 0;
-  color: $blockquote-color;
+  padding: 0 0 0 $spacer-md;
+  margin: 0 $spacer-lg $spacer-md 0;
+  color: $textcolor-light;
   border-left: $border-solid-thick;
 
   p:last-child {
@@ -150,33 +94,28 @@ blockquote {
 
 code,
 pre {
-  font-family: Menlo, Monaco, "Courier New", monospace;
-}
-
-code {
-  padding: $spacing-xs $spacing-sm;
-  font-size: 1rem;
-  color: $code-color;
-  background-color: $alt-bg-color;
+  @include textbase-code();
+  background-color: $backgroundcolor-alt;
   border-radius: $border-radius;
 }
 
+code {
+  // inline
+  padding: $spacer-xs $spacer-sm;
+}
+
 pre {
+  // block
   display: block;
-  margin-top: 0;
-  margin-bottom: $spacing-md;
-  padding: $spacing-md;
-  font-size: 1rem;
-  line-height: 1.4;
+  margin: 0 0 $spacer-md;
+  padding: $spacer-md;
   white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
-  background-color: $alt-bg-color;
 
   code {
-    padding: 0;
-    font-size: 1rem;
-    color: inherit;
     background-color: transparent;
+    border-radius: 0;
+    padding: 0;
   }
 }

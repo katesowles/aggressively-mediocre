@@ -1,59 +1,70 @@
 @import "variables.scss";
+@import "mixins.scss";
 
 ul,
 ol,
 dl {
-  margin-top: 0;
-  margin-bottom: $spacing-md;
+  margin: 0 0 $spacer-sm;
 }
 
 dt {
-  font-weight: 600;
+  @include textweight-bold();
 }
 
 dd {
-  margin-bottom: 0.5rem;
+  margin: 0 0 $spacer-sm;
 }
 
 ul {
-  list-style: inside disc;
-  padding-left: 0;
-
-  ul,
-  ol {
-    margin-top: 0.25rem;
-    margin-bottom: 0.5rem;
-  }
-
-  li {
-    margin-bottom: 0.25rem;
-  }
+  // first level
+  list-style: disc;
 }
 
 ol {
-  list-style: inside decimal;
-  padding-left: 0;
-
-  ul,
-  ol {
-    margin-top: 0.25rem;
-    margin-bottom: 0.5rem;
-  }
-
-  li {
-    margin-bottom: 0.25rem;
-  }
+  // first level
+  list-style: decimal;
 }
 
 ul,
 ol {
-  ul {
-    list-style: inside circle;
-    padding-left: 1rem;
+  // first level
+  list-style-position: inside;
+  padding-left: 0;
 
-    ul {
-      list-style: inside none;
+  > ul {
+    // second level
+    list-style: circle;
+  }
+
+  > ol {
+    // second level
+    list-style: lower-alpha;
+  }
+
+  > ul,
+  > ol {
+    // second level
+    margin: $spacer-xs 0 $spacer-sm;
+    padding-left: $spacer-md;
+
+    > ul {
+      // third level
+      list-style: none;
+    }
+
+    > ol {
+      // third level
+      list-style: lower-roman;
+    }
+
+    > ul,
+    > ol {
+      // third level
       padding-left: 1.4rem;
     }
   }
+}
+
+li {
+  margin: 0 0 $spacer-xs;
 }

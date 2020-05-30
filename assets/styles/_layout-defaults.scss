@@ -1,29 +1,24 @@
 @import "variables.scss";
+@import "mixins.scss";
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  @include prefix(box-sizing, border-box);
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
+  @include spacing-reset();
 }
 
 html {
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 1.6;
+  @include textbase-body();
+  font-size: $textroot-mobile;
 }
 
 body {
-  color: $text-color;
-  background-color: $site-bg-color;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+  @include prefix(text-size-adjust, 100%);
+  background-color: $backgroundcolor-default;
+  color: $textcolor-default;
   overflow-x: hidden;
   overflow-y: scroll;
 
@@ -37,7 +32,6 @@ body {
 
   &::-webkit-scrollbar-thumb {
     background-color: $highlight-color;
-    outline: 2px solid $text-color;
   }
 }
 
@@ -45,5 +39,5 @@ hr {
   border: 0;
   border-top: $border-solid-thin;
   border-bottom: $border-solid-thin;
-  margin: $spacing-md auto;
+  margin: $spacer-md auto;
 }
