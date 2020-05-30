@@ -7,7 +7,7 @@
     {{ range $term_title, $taxonomy := .Site.Taxonomies }}
       {{ $taxonomyCount := len $taxonomy }}
 
-      {{ if ge $taxonomyCount 1 }}
+      {{ if ge $taxonomyCount 2 }}
         {{ $title := $term_title }}
         {{ $list :=  $taxonomy.Alphabetical }}
 
