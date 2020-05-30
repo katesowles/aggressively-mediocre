@@ -9,7 +9,7 @@
 
       <ul>
         {{ range .Pages }}
-          <li>
+          <li class="post-listitem">
             <a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a>
             <small>
               published&nbsp;<time datetime="{{ .Page.PublishDate.UTC.Format "02 Jan 2006" }}">

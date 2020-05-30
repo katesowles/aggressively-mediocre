@@ -12,7 +12,9 @@
       {{ .context.Summary }}
       
       {{ if .context.Truncated }}
-        <a class="read-more" href="{{ .context.RelPermalink }}">See full post...</a>
+      <p class="read-more">
+        <a href="{{ .context.RelPermalink }}">See full post...</a>
+      </p>
       {{ end }}
     </section>
   {{ end }}
