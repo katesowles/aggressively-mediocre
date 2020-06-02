@@ -6,7 +6,7 @@ A [Hugo](https://gohugo.io/) theme. It's fairly plain, it's nothing special, it'
 
 <!-- TODO: ![Aggressively Mediocre theme screenshot](https://github.com/katesowles/aggressively-mediocre/blob/master/images/splash.png) -->
 
-## Installation
+## Installation for an existing Hugo site
 
 In your Hugo site `themes` directory, run:
 
